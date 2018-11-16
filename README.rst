@@ -6,8 +6,8 @@ flask-sklearn
 .. image:: https://img.shields.io/pypi/v/flask_sklearn.svg
         :target: https://pypi.python.org/pypi/flask_sklearn
 
-.. image:: https://img.shields.io/travis/ZachGlassman/flask_sklearn.svg
-        :target: https://travis-ci.org/ZachGlassman/flask_sklearn
+.. image:: https://travis-ci.com/ZachGlassman/flask_sklearn.svg?branch=master
+        :target: https://travis-ci.com/ZachGlassman/flask_sklearn
 
 .. image:: https://readthedocs.org/projects/flask-sklearn/badge/?version=latest
         :target: https://flask-sklearn.readthedocs.io/en/latest/?badge=latest

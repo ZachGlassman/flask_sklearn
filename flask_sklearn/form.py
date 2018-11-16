@@ -5,7 +5,6 @@ from wtforms import StringField, FloatField
 def gen_wtf_form(**kwargs):
     class Form(FlaskForm):
         pass
-
     for key, value in kwargs.items():
         if isinstance(value, str):
             setattr(Form, key, StringField(key))

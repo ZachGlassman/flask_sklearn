@@ -14,7 +14,7 @@ y = [1, 2, 3]
 
 @pytest.fixture
 def abform():
-    return form.sklearn_form(OrderedDict({'a':1, 'b':1}))
+    return form.sklearn_form(OrderedDict({'a': 1, 'b': 1}))
 
 def test_invalid_data(abform):
     est = abform(LinearRegression)()

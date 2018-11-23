@@ -40,7 +40,7 @@ def sklearn_form(ordered_args):
                 return super().fit(X, y)
 
             def save(self, path):
-                joblib.save(self, path)
+                joblib.dump(self, path)
 
             @staticmethod
             def load(path):

@@ -18,10 +18,10 @@ def abform():
                                           ('b', 1))))
 
 def test_invalid_data(abform):
-    est = abform(LinearRegression)()
+    est = abform(LinearRegression)
     with pytest.raises(ValueError):
         est.fit([[1, 2, 3], [1, 2, 3]], [1, 2])
 
 def test_get_args(abform):
-    est = abform(LinearRegression)()
+    est = abform(LinearRegression)
     assert est.get_args() == ['a', 'b']

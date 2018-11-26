@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method='POST' action='/predict'>
+    {{ form.csrf_token }}
+    {% for arg in form.args_ %}
+        {{ form[arg].label }}
+        {{ form[arg]() }}
+    {% endfor %}
+    <input type="submit">
+</form>
+
+</body>
+</html>

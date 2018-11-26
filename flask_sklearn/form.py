@@ -27,6 +27,7 @@ class ScikitForm:
         self._ordered_args = ordered_args
 
     def gen_form(self):
+        # TODO check if not fitted
         form = gen_wtf_form(self._ordered_args)
         form.args_ = self._ordered_args
         return form
@@ -53,6 +54,9 @@ class ScikitForm:
     @staticmethod
     def load(path):
         return joblib.load(path)
+
+    def model_attr(self, attr):
+        return getattr(self._model, attr)
 
 def sklearn_form(ordered_args):
     def f(sklearn_class):

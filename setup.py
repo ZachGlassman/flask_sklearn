@@ -11,7 +11,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['scikit-learn', 'flask-wtf' ]
+requirements = ['scikit-learn', 'flask-wtf', 'flask-restplus' ]
 
 setup_requirements = ['pytest-runner', ]
 

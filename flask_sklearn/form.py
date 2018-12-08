@@ -35,8 +35,13 @@ class ScikitForm:
     def _check_cols(self, X):
         return len(X[0]) == len(self._ordered_args)
 
-    def get_args(self):
+    @property
+    def args(self):
         return list(self._ordered_args)
+        
+    @property
+    def name(self):
+        return str(self._model)
 
     def fit(self, X, y=None):
         """additional check on shape of X"""

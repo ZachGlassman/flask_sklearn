@@ -49,8 +49,8 @@ def test_invalid_data(est):
     with pytest.raises(ValueError):
         est.fit([[1, 2, 3], [1, 2, 3]], [1, 2])
 
-def test_get_args(est):
-    assert est.get_args() == ['a', 'b']
+def test_args(est):
+    assert est.args == ['a', 'b']
 
 def test_form_generate(request, fit_est):
     form = fit_est.gen_form()

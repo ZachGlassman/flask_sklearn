@@ -7,7 +7,7 @@ from datetime import datetime
 from collections import OrderedDict
 import pytest
 from sklearn.linear_model import LinearRegression
-from flask_sklearn import form
+from flask_sklearn import sklearn_form, ScikitForm
 from flask import Flask
 from flask_wtf import FlaskForm
 
@@ -18,7 +18,7 @@ y = [1, 2, 3]
 
 @pytest.fixture
 def abform():
-    return form.sklearn_form(OrderedDict((('a', 1),
+    return sklearn_form(OrderedDict((('a', 1),
                                           ('b', 1))))
 
 @pytest.fixture
@@ -60,6 +60,6 @@ def test_form_generate(request, fit_est):
 
 def test_save_load(fit_est, temp_file):
     fit_est.save(temp_file)
-    new_est = form.ScikitForm.load(temp_file)
+    new_est = ScikitForm.load(temp_file)
     assert all(fit_est.model_attr('coef_') == new_est.model_attr('coef_'))
     assert type(fit_est._model) == type(new_est._model)

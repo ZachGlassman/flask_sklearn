@@ -3,7 +3,7 @@ from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from flask_sklearn.form import sklearn_form
+from flask_sklearn import sklearn_form
 
 data = load_iris()
 X = data['data']
